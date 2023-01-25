@@ -36,6 +36,13 @@ This will print the encoded value.
 
 If there are no command line arguments, and the console input is not available, the input is read from the system clipboard, e.g.:
 
-    urlencode | pbcopy
+    $ urlencode | pbcopy
 
 This will read the input from clipboard, and `pbcopy` will copy the output to the clipboard again (macOS only).
+
+### Decoding
+
+In order to decode an already encoded string, use the command line argument `-d`:
+
+    $ urlencode -d Hello%2C+World
+    Hello, World
